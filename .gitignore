@@ -205,7 +205,7 @@ __marimo__/
 
 # dbt profile.yml
 dbt_project/profiles.yml
-
+logs/
 
 # dagster tmp_
 dagster_project/.tmp_*
