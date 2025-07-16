@@ -5,5 +5,5 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "dlt>=1.13.0",
+    "dlt[sql-database]>=1.13.0",
 ]
