@@ -208,4 +208,7 @@ dbt_project/profiles.yml
 
 
 # dagster tmp_
-dagster_project/tmp_*
+dagster_project/.tmp_*
+
+# dlt project
+dlt_project/.dlt
