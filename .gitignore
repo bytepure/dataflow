@@ -201,3 +201,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# dbt profile.yml
+dbt_project/profiles.yml
+
+
+# dagster tmp_
+dagster_project/tmp_*
