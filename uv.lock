@@ -458,6 +458,19 @@ wheels = [
 ]
 
 [[package]]
+name = "dagster-dlt"
+version = "0.27.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dagster" },
+    { name = "dlt" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/03/18/9d431d422057bd78f4e32f53b1cc3fabdca3acd3f30c3f091dd8b0df89ce/dagster_dlt-0.27.2.tar.gz", hash = "sha256:567bcb8c6855b7c5822a9636d4a9bc00fb90bcff04f652472edfdf6f8f0d7240", size = 17743, upload-time = "2025-07-10T19:27:10.514Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/99/e9/5157dc21635a54d5211fc7718a2b474513079b2cc2c51e8549afb044e0c7/dagster_dlt-0.27.2-py3-none-any.whl", hash = "sha256:0d46e075ba204fc9337a4b36ac107344a85d8b8ec4d31aace10c86d6e9ba563a", size = 20260, upload-time = "2025-07-10T19:27:09.676Z" },
+]
+
+[[package]]
 name = "dagster-duckdb"
 version = "0.27.2"
 source = { registry = "https://pypi.org/simple" }
@@ -502,6 +515,7 @@ source = { editable = "dagster_project" }
 dependencies = [
     { name = "dagster" },
     { name = "dagster-dbt" },
+    { name = "dagster-dlt" },
     { name = "dagster-duckdb" },
 ]
 
@@ -515,6 +529,7 @@ dev = [
 requires-dist = [
     { name = "dagster", specifier = "==1.11.2" },
     { name = "dagster-dbt", specifier = ">=0.27.2" },
+    { name = "dagster-dlt", specifier = ">=0.27.2" },
     { name = "dagster-duckdb", specifier = ">=0.27.2" },
 ]
 
@@ -561,6 +576,10 @@ name = "dataflow"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "dagster" },
+    { name = "dagster-dbt" },
+    { name = "dagster-dlt" },
+    { name = "dagster-webserver" },
     { name = "dbt-clickhouse" },
     { name = "dbt-core" },
     { name = "dbt-postgres" },
@@ -568,6 +587,10 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "dagster", specifier = ">=1.11.2" },
+    { name = "dagster-dbt", specifier = ">=0.27.2" },
+    { name = "dagster-dlt", specifier = ">=0.27.2" },
+    { name = "dagster-webserver", specifier = ">=1.11.2" },
     { name = "dbt-clickhouse", specifier = ">=1.9.2" },
     { name = "dbt-core", specifier = ">=1.10.4" },
     { name = "dbt-postgres", specifier = ">=1.9.0" },
